@@ -1,42 +1,46 @@
 {
+  "content": {
+    "value": "hirooo",
+    "label": "Content",
+    "type": "text"
+  },
+  "font": {
+    "type": "google_font",
+    "value": "Poppins"
+  },
   "backgroundColor": {
     "value": "#ffffff",
     "label": "Background Color",
     "type": "color"
   },
   "textColor": {
-    "value": "#a600ff",
+    "value": "#7300ff",
     "label": "Text Color",
     "type": "color"
   },
-  "content": {
-    "value": "mbad.me",
-    "label": "Content",
-    "type": "text"
-  },
   "fontSize": {
-    "value": 100,
+    "value": 79,
     "label": "Text size",
     "range": {
-      "min": 10,
+      "min": 5,
       "max": 300
     },
     "step": 1,
     "type": "number"
   },
-  "blurVolume": {
-    "value": 25,
-    "label": "Blurriness",
+  "blurVolumeThreshHold": {
+    "value": 0.1,
+    "label": "Blurriness sensitivity",
     "range": {
       "min": 0,
-      "max": 100
+      "max": 1
     },
-    "step": 1,
+    "step": 0.1,
     "type": "number"
   },
   "positionY": {
     "label": "vertical alignment",
-    "value": 1,
+    "value": 0,
     "type": "option",
     "options": [
       {

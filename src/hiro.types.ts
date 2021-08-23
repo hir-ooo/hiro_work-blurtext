@@ -3,42 +3,45 @@ export enum EMbadPropTypes {
     NUMBER = "number",
     HTML = "html",
     COLOR = "color",
-    OPTION="option"
+    OPTION="option",
+    GOOGLE_FONT="google_font"
 }
 
-export interface IMbadPropBase<T> {
+export interface IHiroPropBase<T> {
     value: T,
     label: string,
     type: EMbadPropTypes
 }
 
-export interface IMbadProp_Text extends IMbadPropBase<string> {
+export interface IHiroProp_Text extends IHiroPropBase<string> {
     value: string;
     type: EMbadPropTypes.TEXT
 }
 
-export interface IMbadProp_Html extends IMbadPropBase<string> {
+export interface IHiroProp_Html extends IHiroPropBase<string> {
     value: string;
     type: EMbadPropTypes.HTML
 }
 
-export interface IMbadProp_Color extends IMbadPropBase<string> {
+export interface IHiroProp_Color extends IHiroPropBase<string> {
     value: string;
     rgbaValue?: { r: number, g: number, b: number, a: number };
     type: EMbadPropTypes.COLOR
 }
 
-export interface IMbadProp_Number extends IMbadPropBase<number> {
+
+export interface IHiroProp_Number extends IHiroPropBase<number> {
     value: number;
     range: {
         min: number|null,
         max: number|null
     };
     step: number|null;
+    unit: string|null;
     type: EMbadPropTypes.NUMBER
 }
 
-export interface IMbadProp_Options<T> extends IMbadPropBase<string|number> {
+export interface IHiroProp_Options<T> extends IHiroPropBase<string|number> {
     options: {
         label: string,
         value: T
@@ -48,13 +51,19 @@ export interface IMbadProp_Options<T> extends IMbadPropBase<string|number> {
     type: EMbadPropTypes.OPTION
 }
 
-export type TMbadProps = IMbadProp_Color
-| IMbadProp_Number
-| IMbadProp_Html
-| IMbadProp_Text
-| IMbadProp_Options<string|number>;
+export interface IHiroProp_GoogleFont extends IHiroPropBase<string> {
+    value: string;
+    type: EMbadPropTypes.GOOGLE_FONT
+}
 
-export interface IMbadProps {
+export type TMbadProps = IHiroProp_Color
+    | IHiroProp_Number
+    | IHiroProp_Html
+    | IHiroProp_Text
+    | IHiroProp_Options<string|number>
+    | IHiroProp_GoogleFont;
+
+export interface IHiroProps {
     [key: string]: TMbadProps
 }
 
@@ -65,7 +74,7 @@ export interface IPackage{
     version: string;
 }
 
-export interface IMbadConfig extends IPackage{
-    props: IMbadProps;
+export interface IHiroConfig extends IPackage{
+    props: IHiroProps;
     devUrl: string;
 }

@@ -37,3 +37,7 @@ static_files/*
 deploy_script.sh
 
 .parcel-cache
+# Local Netlify folder
+.netlify
+
+netlify.toml
