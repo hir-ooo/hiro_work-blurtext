@@ -5,8 +5,7 @@
   "author": "amirhouieh",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve src/index.html",
-    "watch": "parcel watch src/index.html",
+    "dev": "parcel serve src/index.html",
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
