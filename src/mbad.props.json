@@ -1,0 +1,75 @@
+{
+  "backgroundColor": {
+    "value": "#ffffff",
+    "label": "Background Color",
+    "type": "color"
+  },
+  "textColor": {
+    "value": "#a600ff",
+    "label": "Text Color",
+    "type": "color"
+  },
+  "content": {
+    "value": "mbad.me",
+    "label": "Content",
+    "type": "text"
+  },
+  "fontSize": {
+    "value": 100,
+    "label": "Text size",
+    "range": {
+      "min": 10,
+      "max": 300
+    },
+    "step": 1,
+    "type": "number"
+  },
+  "blurVolume": {
+    "value": 25,
+    "label": "Blurriness",
+    "range": {
+      "min": 0,
+      "max": 100
+    },
+    "step": 1,
+    "type": "number"
+  },
+  "positionY": {
+    "label": "vertical alignment",
+    "value": 1,
+    "type": "option",
+    "options": [
+      {
+        "value": "center",
+        "label": "center"
+      },
+      {
+        "value": "flex-start",
+        "label": "top"
+      },
+      {
+        "value": "flex-end",
+        "label": "bottom"
+      }
+    ]
+  },
+  "positionX": {
+    "label": "Horizontal alignment",
+    "value": 0,
+    "type": "option",
+    "options": [
+      {
+        "value": "center",
+        "label": "center"
+      },
+      {
+        "value": "flex-start",
+        "label": "left"
+      },
+      {
+        "value": "flex-end",
+        "label": "right"
+      }
+    ]
+  }
+}
